@@ -12,6 +12,19 @@
     <artifactId>gulimall-common</artifactId>
     <description>每一个微服务公共依赖,bean,工具类等</description>
 
+    <!--阿里巴巴springcloud版本管理管理-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <!--mybatisplus-->
         <dependency>
@@ -47,6 +60,11 @@
             <version>2.5</version>
             <!--tomcat自带,打包时不带-->
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
 </project>
